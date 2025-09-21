@@ -33,7 +33,7 @@ const Contact = () => {
                 </h3>
                 <p>
                   წერეთლის 8, სენაკი <br />
-                  MR Hotel <br />
+                  Ecowise <br />
                 </p>
               </div>
             </div>

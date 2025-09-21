@@ -62,7 +62,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo" onClick={handleHomeClick}>
-            MR Hotel
+            ECOWISE GEORGIA
           </NavLink>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">

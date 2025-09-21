@@ -55,7 +55,7 @@ export default function Booknow() {
   const [fullName, setFullName] = useState("");
   const [value, setValue] = useState(0);
   const [email, setEmail] = useState("");
-  const [persons, setPersons] = useState("");
+  const [persons, setPersons] = useState("1");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const navigate = useNavigate();
@@ -104,43 +104,43 @@ export default function Booknow() {
     .replace(/ /g, "-");
 
   function writeToDatabase() {
-    if (persons > roomsDetails.capacity) {
-      return alert("Please check the capacity of Room.");
-    }
-    if (daysLeft === 0) {
-      return alert("Please select the dates.");
-    }
-    if (
-      fullName &&
-      email &&
-      value &&
-      persons <= roomsDetails.capacity &&
-      startDate &&
-      endDate
-    ) {
-      set(ref(db, `bookings/`), {
-        name: fullName,
-        email: email,
-        phone: value,
-        persons: persons,
-        type: roomsDetails.ItemID,
-        startDate: formattedDate,
-        endDate: formattedEndDate,
-        totalPrice: daysLeft * roomsDetails.price,
-        days: daysLeft,
-        capacity: roomsDetails.capacity,
-        status: "Pending",
-        refID: email,
-      }).then(() => {
-        alert("Please Fill all fields");
-      });
-      setFullName("");
-      setEmail("");
-      setValue(0);
-      setPersons(0);
-    } else {
+    // if (persons > roomsDetails.capacity) {
+    //   return alert("Please check the capacity of Room.");
+    // }
+    // if (daysLeft === 0) {
+    //   return alert("Please select the dates.");
+    // }
+    // if (
+    //   fullName &&
+    //   email &&
+    //   value &&
+    //   persons <= roomsDetails.capacity &&
+    //   startDate &&
+    //   endDate
+    // ) {
+    set(ref(db, `bookings/`), {
+      name: fullName,
+      email: email,
+      phone: value,
+      persons: persons,
+      type: roomsDetails.ItemID,
+      startDate: formattedDate,
+      endDate: formattedEndDate,
+      totalPrice: daysLeft * roomsDetails.price,
+      days: daysLeft,
+      capacity: roomsDetails.capacity,
+      status: "Pending",
+      refID: email,
+    }).then(() => {
       alert("Please Fill all fields");
-    }
+    });
+    setFullName("");
+    setEmail("");
+    setValue(0);
+    setPersons(0);
+    // } else {
+    //   alert("Please Fill all fields");
+    // }
   }
 
   return (
@@ -148,11 +148,15 @@ export default function Booknow() {
       <div className="row">
         <div className="col-md-10 mx-auto col-12  shadow-lg border-0 p-4">
           <div>
-            <h1 className="display-4 booking-hd">Booking</h1>
+            <h1 className="display-4 booking-hd">ყიდვა</h1>
           </div>
-          <div className="row">
-            <div className="col-md-6 col-12 my-auto">
-              <img src={hotel1} className="img-fluid" alt="selected room" />
+          {/* <div className="row">
+             <div className="col-md-6 col-12 my-auto">
+              <img
+                src={roomsDetails.img}
+                className="img-fluid"
+                alt="selected room"
+              />
             </div>
             <div className="col-md-6 col-12 my-auto">
               <h1>Rooms Details</h1>
@@ -181,9 +185,9 @@ export default function Booknow() {
                 </thead>
               </table>
             </div>
-          </div>
-          <div className="row my-3">
-            <div className="col-md-6 col-12">
+          </div> */}
+          {/* <div className="row my-3">
+             <div className="col-md-6 col-12">
               <div className="form-group">
                 <label htmlFor="Fromdate" className="font-weight-bolder mr-3">
                   From Date{" "}
@@ -196,7 +200,7 @@ export default function Booknow() {
                   required
                 />
               </div>
-            </div>
+            </div> 
             <div className="col-md-6 col-12">
               <div className="form-group">
                 <label htmlFor="Todate" className="font-weight-bolder mr-3">
@@ -210,33 +214,32 @@ export default function Booknow() {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="row">
-            <div className="col-md-6 col-12">
+            {/* <div className="col-md-6 col-12">
               <h6 className="font-weight-bolder">
-                Number of days : {daysLeft}
+                პროდუქტის რაოდენობა: {daysLeft}
               </h6>
               <mark>Please make sure Checkin time is from 9 am to 12 pm</mark>
-            </div>
-            <div className="col-md-6 col-12">
+            </div> */}
+            {/* <div className="col-md-6 col-12">
               <h6 className="font-weight-bold">
-                Price per day :{" "}
-                <span className="">GEL {roomsDetails.price}</span>
+                ფასი : <span className="">ლარი {roomsDetails.price}</span>
               </h6>
               <h6 className="font-weight-bold">
-                Total Price to be paid :{" "}
+                ჯამური ფასი :{" "}
                 <span className="text-primary">
-                  GEL {roomsDetails.price * daysLeft}
+                  {roomsDetails.price * persons} ლარი
                 </span>
               </h6>
-            </div>
+            </div> */}
           </div>
           <div className="row my-4">
             <div className="col-md-12 col-12 my-auto">
               <div className="col-md-12 col-12 float-right">
                 <form>
                   <div className="form-group">
-                    <label htmlFor="persons">No. of persons</label>
+                    <label htmlFor="persons">პროდუქტის რაოდენობა</label>
                     <input
                       type="number"
                       value={persons}
@@ -248,7 +251,7 @@ export default function Booknow() {
                     />
 
                     <br />
-                    <label htmlFor="forName">Name</label>
+                    <label htmlFor="forName">სახელი</label>
                     <input
                       type="text"
                       className="form-control"
@@ -260,9 +263,9 @@ export default function Booknow() {
                     />
                     <br />
 
-                    <label htmlFor="Number">Number</label>
+                    <label htmlFor="Number">ნომერი</label>
                     <PhoneInput
-                      defaultCountry="PK"
+                      defaultCountry="GE"
                       className="phoneInput"
                       id="number"
                       placeholder="Enter phone number"
@@ -271,7 +274,7 @@ export default function Booknow() {
                     />
                     <br />
 
-                    <label htmlFor="exampleInputEmail1">Email address</label>
+                    <label htmlFor="exampleInputEmail1">ემაილი</label>
                     <input
                       type="email"
                       className="form-control"
@@ -282,9 +285,9 @@ export default function Booknow() {
                       placeholder="Enter email"
                       required
                     />
-                    <small id="emailHelp" className="form-text text-muted">
+                    {/* <small id="emailHelp" className="form-text text-muted">
                       Enter the same email through which you have logged in.
-                    </small>
+                    </small> */}
                   </div>
 
                   <div className="form-group form-check"></div>
@@ -294,7 +297,7 @@ export default function Booknow() {
                     onClick={writeToDatabase}
                     className="btn btn-block btn-outline-primary confirm-booking-btn"
                   >
-                    Confirm Booking
+                    <Link to="/">ყიდვა</Link>
                   </button>
                 </center>
               </div>

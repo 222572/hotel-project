@@ -7,7 +7,10 @@ import About from "../About/About";
 const Home = () => {
   return (
     <div>
-      <MyCarousel title="Welcome to MR Hotel" subtitle="We serve the best" />
+      <MyCarousel
+        title="Welcome to Ecowise"
+        subtitle="ეკოლოგია + სიბრძნე = ჩვენი მომავალი"
+      />
       <div id="about-section">
         <About />
       </div>

@@ -3,14 +3,12 @@ import MenuItem from "@mui/material/MenuItem";
 import TextField from "@mui/material/TextField";
 import { Link } from "react-router-dom";
 
-import card1 from "../../imgs/card1.jpg";
-import card2 from "../../imgs/card2.jpg";
-import card3 from "../../imgs/card3.jpg";
-import card4 from "../../imgs/card4.jpg";
-import card5 from "../../imgs/card5.jpg";
-import card6 from "../../imgs/card6.jpg";
-import card8 from "../../imgs/card8.jpg";
-import card9 from "../../imgs/card9.jpg";
+import whiteShirt from "../../imgs/white shirt.png";
+import blackShirt from "../../imgs/black shirt.png";
+import whiteCup from "../../imgs/white cup.png";
+import whitePin from "../../imgs/white pin.png";
+import whiteBag from "../../imgs/white bag.png";
+
 import "./Items.css";
 
 const rooms = [
@@ -37,21 +35,14 @@ const breakfasts = [
 
 const roomDetails = {
   single: [
-    { id: 1, price: 200, img: card1, breakfast: "not included" },
-    { id: 2, price: 200, img: card8, breakfast: "not included" },
+    { id: 1, price: 25, img: whiteShirt, breakfast: "not included" },
+    { id: 2, price: 25, img: blackShirt, breakfast: "not included" },
   ],
   double: [
-    { id: 3, price: 400, img: card2, breakfast: "not included" },
-    { id: 4, price: 400, img: card9, breakfast: "not included" },
+    { id: 3, price: 20, img: whiteCup, breakfast: "not included" },
+    { id: 4, price: 5, img: whitePin, breakfast: "not included" },
   ],
-  family: [
-    { id: 5, price: 550, img: card4, breakfast: "included" },
-    { id: 6, price: 550, img: card5, breakfast: "included" },
-  ],
-  presidential: [
-    { id: 7, price: 1000, img: card3, breakfast: "included" },
-    { id: 8, price: 1000, img: card6, breakfast: "included" },
-  ],
+  family: [{ id: 5, price: 15, img: whiteBag, breakfast: "included" }],
 };
 
 const filterRoomsByPrice = (room, priceRange) => {
@@ -134,7 +125,7 @@ const SearchRooms = () => {
 
   return (
     <div className="container">
-      <h1 className="featured-heading">Search Rooms</h1>
+      <h1 className="featured-heading">იყიდე მერჩი</h1>
 
       <div className="search-sort-filter">
         <TextField
@@ -154,13 +145,13 @@ const SearchRooms = () => {
           value={sortOption}
           onChange={handleSortChange}
         >
-          <MenuItem value="alphabetical-asc">Alphabetical (A-Z)</MenuItem>
-          <MenuItem value="alphabetical-desc">Alphabetical (Z-A)</MenuItem>
-          <MenuItem value="price-asc">Price (Low to High)</MenuItem>
-          <MenuItem value="price-desc">Price (High to Low)</MenuItem>
+          <MenuItem value="alphabetical-asc">ანბანი (ა-ჰ)</MenuItem>
+          <MenuItem value="alphabetical-desc">ანბანი (ჰ-ა)</MenuItem>
+          <MenuItem value="price-asc">ფასი (ზრდადობით)</MenuItem>
+          <MenuItem value="price-desc">ფასი (კლებადობით)</MenuItem>
         </TextField>
 
-        <TextField
+        {/* <TextField
           className="search-room-input"
           id="outlined-select-currency"
           select
@@ -203,7 +194,7 @@ const SearchRooms = () => {
               {option.label}
             </MenuItem>
           ))}
-        </TextField>
+        </TextField> */}
       </div>
 
       <div className="myCards">
@@ -222,16 +213,14 @@ const SearchRooms = () => {
             </div>
             <div className="slide slide2">
               <div className="content">
-                <h3>{`${
-                  room.type.charAt(0).toUpperCase() + room.type.slice(1)
-                } Room`}</h3>
+                <h3>{`${room.price} ლარი`}</h3>
                 {room.id === 5 ? (
                   <div onClick={() => handleFamilyRoomClick(room.id)}>
-                    <p>Click to book your room of your own choice</p>
+                    <p>ყიდვა</p>
                   </div>
                 ) : (
-                  <Link to={`/singleItem/${room.type}`}>
-                    <p>Click to book your room of your own choice</p>
+                  <Link to={`/booknow/${room.type}`}>
+                    <p>ყიდვა</p>
                   </Link>
                 )}
               </div>
