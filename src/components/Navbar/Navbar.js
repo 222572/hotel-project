@@ -6,7 +6,7 @@ import facebookIcon from "../../imgs/Facebook_Logo.png"; // Import the Facebook 
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [language, setLanguage] = useState("ENG");
+  const [language, setLanguage] = useState("GEO");
   const { user, logOut } = useUserAuth();
   const navigate = useNavigate();
   const location = useLocation();
@@ -67,7 +67,7 @@ function Navbar() {
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <div className="nav-links" onClick={handleHomeClick}>
-                Home
+                მთავარი
               </div>
               <div className="dropdown-menu">
                 <a
@@ -75,14 +75,14 @@ function Navbar() {
                   className="dropdown-item"
                   onClick={(e) => handleDropdownClick(e, "about-section")}
                 >
-                  About
+                  ჩვენს შესახებ
                 </a>
                 <a
                   href="#rooms-section"
                   className="dropdown-item"
                   onClick={(e) => handleDropdownClick(e, "rooms-section")}
                 >
-                  Rooms
+                  ღონისძიებები
                 </a>
                 <a
                   href="#social-media-section"
@@ -91,19 +91,19 @@ function Navbar() {
                     handleDropdownClick(e, "social-media-section")
                   }
                 >
-                  Social Media
+                  სოციალური ქსელები
                 </a>
               </div>
             </li>
             <li className="nav-item">
               <NavLink
                 exact
-                to="/rooms"
+                to="/items"
                 activeClassName="active"
                 className="nav-links"
                 onClick={handleClick}
               >
-                Rooms
+                მერჩი
               </NavLink>
             </li>
             <li className="nav-item">
@@ -114,7 +114,7 @@ function Navbar() {
                 className="nav-links"
                 onClick={handleClick}
               >
-                Contact Us
+                კონტაქტი
               </NavLink>
             </li>
             <li className="nav-item">
@@ -166,7 +166,7 @@ function Navbar() {
                     className="nav-links login-and-signup-btn bookings-btn"
                     onClick={handleClick}
                   >
-                    Bookings
+                    კალათა
                   </NavLink>
                 </li>
                 <li className="nav-item">

@@ -113,3 +113,55 @@ body {
 .featured-heading {
   margin-bottom: 60px;
 }
+
+.event-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  max-width: 360px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.event-info {
+  color: #555;
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.event-price {
+  margin: 15px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2a9d8f;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #2a9d8f;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #21867a;
+}

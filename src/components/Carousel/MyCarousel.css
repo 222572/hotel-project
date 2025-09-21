@@ -1,5 +1,7 @@
 .carousel-item {
   height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 .carousel-caption {
   position: absolute;

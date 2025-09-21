@@ -6,11 +6,11 @@ import { UserAuthContextProvider } from "./Context/UserAuthContext";
 
 import Home from "./screens/Home/Home";
 import Contact from "./screens/Contact/Contact";
-import Rooms from "./screens/Rooms/Rooms";
+import Items from "./screens/Items/Items";
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
-import SingleRoom from "./screens/Rooms/SingleRoom";
+import SingleItem from "./screens/Items/SingleItem";
 import Booknow from "./components/Booking/Booknow";
 import MyBookings from "./components/Booking/MyBookings";
 
@@ -24,10 +24,10 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" index element={<Home />} />
-            <Route path="/rooms" element={<Rooms />} />
+            <Route path="/items" element={<Items />} />
             {
               <Route
-                path="/booknow/:roomType"
+                path="/booknow/:ItemID"
                 element={
                   <ProtectedRoute>
                     <Booknow />
@@ -38,7 +38,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/singleRoom/:roomType" element={<SingleRoom />} />
+            <Route path="/singleItem/:ItemID" element={<SingleItem />} />
             <Route path="/mybookings" element={<MyBookings />} />
           </Routes>
         </UserAuthContextProvider>

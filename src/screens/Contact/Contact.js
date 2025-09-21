@@ -11,7 +11,7 @@ const Contact = () => {
         }}
       >
         <div className="content">
-          <h2 className="contact-us-hd">Contact Us </h2>
+          <h2 className="contact-us-hd">დაგვიკავშირდით</h2>
         </div>
 
         <div className="mycontainer">
@@ -28,11 +28,11 @@ const Contact = () => {
                     rel="noopener noreferrer"
                     className="address-link"
                   >
-                    Address
+                    მისამართი
                   </a>
                 </h3>
                 <p>
-                  3600 Oni, Shovi, <br />
+                  წერეთლის 8, სენაკი <br />
                   MR Hotel <br />
                 </p>
               </div>
@@ -43,7 +43,7 @@ const Contact = () => {
                 <i className="fa fa-phone" aria-hidden="true"></i>
               </div>
               <div className="text">
-                <h3>Phone</h3>
+                <h3>ტელეფონი</h3>
                 <p>+995(123)-45-67-89</p>
               </div>
             </div>
@@ -53,7 +53,7 @@ const Contact = () => {
                 <i className="fa fa-envelope-o" aria-hidden="true"></i>
               </div>
               <div className="text">
-                <h3>Email</h3>
+                <h3>ემაილი</h3>
                 <p>MR@gmail.com</p>
               </div>
             </div>
@@ -61,7 +61,7 @@ const Contact = () => {
 
           <div className="contactForm">
             <form>
-              <h2>Send Message</h2>
+              <h2>მესიჯის გაგზავნა</h2>
               <div className="inputBox">
                 <input
                   type="text"
@@ -69,7 +69,7 @@ const Contact = () => {
                   required="required"
                   className="contact-input"
                 />
-                <span>Full Name</span>
+                <span>სახელი და გვარი</span>
               </div>
               <div className="inputBox">
                 <input
@@ -78,24 +78,24 @@ const Contact = () => {
                   required="required"
                   className="contact-input"
                 />
-                <span>Email</span>
+                <span>ემაილი</span>
               </div>
               <div className="inputBox">
                 <textarea
                   required="requred"
                   className="contact-input"
                 ></textarea>
-                <span>Type your message ...</span>
+                <span>შენი მესიჯი ...</span>
                 <div className="newsletter-checkbox">
                   <input type="checkbox" id="newsletter" name="newsletter" />
-                  <label htmlFor="newsletter">A newsletter subscription</label>
+                  <label htmlFor="newsletter">სიახლეების მიღება</label>
                 </div>
               </div>
               <div className="inputBox">
                 <input
                   type="submit"
                   name=""
-                  value="Send"
+                  value="გაგზავნა"
                   className="contact-input"
                 />
               </div>

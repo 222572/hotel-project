@@ -38,9 +38,9 @@ const MyCarousel = (props) => {
           <div className="carousel-caption text-center">
             <h1>{props.title}</h1>
             <h3>{props.subtitle}</h3>
-            <Link to="/rooms">
+            <Link to="/items">
               <a className="btn btn-outline-light btn-lg carousel-btn">
-                Our Rooms
+                ჩვენი მერჩი
               </a>
             </Link>
           </div>
@@ -50,9 +50,9 @@ const MyCarousel = (props) => {
           <div className="carousel-caption text-center">
             <h1>{props.title}</h1>
             <h3>{props.subtitle}</h3>
-            <Link to="/rooms">
+            <Link to="/items">
               <a className="btn btn-outline-light btn-lg carousel-btn">
-                Our Rooms
+                ჩვენი მერჩი
               </a>
             </Link>
           </div>
@@ -62,9 +62,9 @@ const MyCarousel = (props) => {
           <div className="carousel-caption text-center">
             <h1>{props.title}</h1>
             <h3>{props.subtitle}</h3>
-            <Link to="/rooms">
+            <Link to="/items">
               <a className="btn btn-outline-light btn-lg carousel-btn">
-                Our Rooms
+                ჩვენი მერჩი
               </a>
             </Link>
           </div>

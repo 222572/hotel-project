@@ -6,11 +6,11 @@ import SocialMedia from "../../imgs/social.png";
 const MyFooter = () => {
   return (
     <div className="myFooter">
-      <h1>Find Us</h1>
+      <h1>დაგვიკავშირდით</h1>
       <Container>
         <img src={SocialMedia} alt="Social Media"></img>
         <Column>
-          <Heading>Social Media</Heading>
+          <Heading>სოციალური ქსელები</Heading>
           <FooterLink href="#">
             <i className="fab fa-facebook-f">
               <span style={{ marginLeft: "10px" }}>Facebook</span>

@@ -9,7 +9,7 @@ import card12 from "../../imgs/card12.jpg";
 import card13 from "../../imgs/card13.jpg";
 import card14 from "../../imgs/card14.jpg";
 import card15 from "../../imgs/card15.jpg";
-import "./Rooms.css";
+import "./Items.css";
 import { Link, useParams } from "react-router-dom";
 
 const roomsDetails = [
@@ -19,7 +19,7 @@ const roomsDetails = [
       breakfast: "not included",
       price: 200,
       pets: "allowed",
-      roomtype: "single",
+      ItemID: "single",
       size: " 30 m2",
       image: [card1, card7],
       details:
@@ -30,7 +30,7 @@ const roomsDetails = [
       breakfast: "included",
       price: 400,
       pets: "allowed",
-      roomtype: "double",
+      ItemID: "double",
       size: " 45 m2",
       image: [card2, card11],
       details:
@@ -41,7 +41,7 @@ const roomsDetails = [
       breakfast: "included",
       price: 550,
       pets: "not allowed",
-      roomtype: "family",
+      ItemID: "family",
       size: " 70 m2",
       image: [card4, card13, card14],
       details:
@@ -52,7 +52,7 @@ const roomsDetails = [
       breakfast: "included",
       price: 1000,
       pets: "not allowed",
-      roomtype: "presidential",
+      ItemID: "presidential",
       size: " 120 m2",
       image: [card3, card12, card15],
       details:
@@ -62,27 +62,25 @@ const roomsDetails = [
 ];
 
 const SingleRoom = () => {
-  const { roomType } = useParams();
-  console.log(roomType);
+  const { ItemID } = useParams();
+  console.log(ItemID);
   let myVar;
 
-  if (roomType === "single") {
+  if (ItemID === "single") {
     myVar = roomsDetails[0].single;
     console.log(myVar);
-  } else if (roomType === "double") {
+  } else if (ItemID === "double") {
     myVar = roomsDetails[0].double;
-  } else if (roomType === "family") {
+  } else if (ItemID === "family") {
     myVar = roomsDetails[0].family;
-  } else if (roomType === "presidential") {
+  } else if (ItemID === "presidential") {
     myVar = roomsDetails[0].presidential;
   }
 
   return (
     <div>
       <center>
-        <h1 className="room-details-heading">
-          Details of {myVar.roomtype} room
-        </h1>
+        <h1 className="room-details-heading">Details of {myVar.ItemID} room</h1>
       </center>
       <div className="singleRoom-cards">
         <div className="card-row">
@@ -118,7 +116,7 @@ const SingleRoom = () => {
       </div>
       <center>
         <div>
-          <Link to={`/booknow/${roomType}`}>
+          <Link to={`/booknow/${ItemID}`}>
             <button className="btn bookNow-btn">Book Now</button>
           </Link>
         </div>

@@ -11,43 +11,43 @@ import { ref, set } from "firebase/database";
 import { db } from "../../config/firebase-config";
 
 export default function Booknow() {
-  const { roomType } = useParams();
-  console.log(roomType);
+  const { ItemID } = useParams();
+  console.log(ItemID);
   var roomsDetails = {};
-  if (roomType == "single") {
+  if (ItemID == "single") {
     roomsDetails = {
       capacity: 1,
       breakfast: "not included",
       price: 200,
       pets: "allowed",
-      roomtype: "single",
+      ItemID: "single",
       size: "30 m2",
     };
-  } else if (roomType == "double") {
+  } else if (ItemID == "double") {
     roomsDetails = {
       capacity: 2,
       breakfast: "not included",
       price: 400,
       pets: "allowed",
-      roomtype: "double",
+      ItemID: "double",
       size: "45 m2",
     };
-  } else if (roomType == "family") {
+  } else if (ItemID == "family") {
     roomsDetails = {
       capacity: 6,
       breakfast: "included",
       price: 550,
       pets: "not allowed",
-      roomtype: "family",
+      ItemID: "family",
       size: "70 m2",
     };
-  } else if (roomType == "presidential") {
+  } else if (ItemID == "presidential") {
     roomsDetails = {
       capacity: 4,
       breakfast: "included",
       price: 1000,
       pets: "not allowed",
-      roomtype: "presidential",
+      ItemID: "presidential",
       size: "120 m2",
     };
   }
@@ -123,7 +123,7 @@ export default function Booknow() {
         email: email,
         phone: value,
         persons: persons,
-        type: roomsDetails.roomtype,
+        type: roomsDetails.ItemID,
         startDate: formattedDate,
         endDate: formattedEndDate,
         totalPrice: daysLeft * roomsDetails.price,
@@ -160,7 +160,7 @@ export default function Booknow() {
                 <thead className="thead-light">
                   <tr>
                     <th className="dark-shade">Room Type</th>
-                    <td>{roomsDetails.roomtype}</td>
+                    <td>{roomsDetails.ItemID}</td>
                   </tr>
                   <tr>
                     <th className="dark-shade">Capacity</th>

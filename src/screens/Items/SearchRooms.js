@@ -11,7 +11,7 @@ import card5 from "../../imgs/card5.jpg";
 import card6 from "../../imgs/card6.jpg";
 import card8 from "../../imgs/card8.jpg";
 import card9 from "../../imgs/card9.jpg";
-import "./Rooms.css";
+import "./Items.css";
 
 const rooms = [
   { value: "all", label: "all" },
@@ -60,14 +60,14 @@ const filterRoomsByPrice = (room, priceRange) => {
 };
 
 const SearchRooms = () => {
-  const [roomType, setRoomType] = React.useState("all");
+  const [ItemID, setItemID] = React.useState("all");
   const [roomPrice, setRoomPrice] = React.useState("any");
   const [roomBreakfast, setRoomBreakfast] = React.useState("any");
   const [sortOption, setSortOption] = React.useState("alphabetical-asc");
   const [searchQuery, setSearchQuery] = React.useState("");
 
   const handleRoomChange = (event) => {
-    setRoomType(event.target.value);
+    setItemID(event.target.value);
   };
 
   const handlePriceChange = (event) => {
@@ -104,7 +104,7 @@ const SearchRooms = () => {
     const rooms = roomDetails[key];
     return rooms
       .filter((room) => {
-        if (roomType !== "all" && roomType !== key) {
+        if (ItemID !== "all" && ItemID !== key) {
           return false;
         }
         if (roomPrice !== "any" && !filterRoomsByPrice(room, roomPrice)) {
@@ -165,7 +165,7 @@ const SearchRooms = () => {
           id="outlined-select-currency"
           select
           label="Room Type"
-          value={roomType}
+          value={ItemID}
           onChange={handleRoomChange}
         >
           {rooms.map((option) => (
@@ -230,7 +230,7 @@ const SearchRooms = () => {
                     <p>Click to book your room of your own choice</p>
                   </div>
                 ) : (
-                  <Link to={`/singleRoom/${room.type}`}>
+                  <Link to={`/singleItem/${room.type}`}>
                     <p>Click to book your room of your own choice</p>
                   </Link>
                 )}

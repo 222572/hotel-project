@@ -1,7 +1,7 @@
 import React from "react";
 import SearchRooms from "./SearchRooms";
 
-const Rooms = () => {
+const Items = () => {
   return (
     <div>
       <SearchRooms />
@@ -9,4 +9,4 @@ const Rooms = () => {
   );
 };
 
-export default Rooms;
+export default Items;

@@ -11,84 +11,17 @@ const MyCards = () => {
     <div>
       <div class="container">
         <center>
-          <h1 className="featured-heading"> Featured Rooms </h1>
+          <h1 className="featured-heading"> მომავალი ღონისძიებები </h1>
+          <div class="event-card">
+            <div class="event-title">დანერგე ახალი სიცოცხლე</div>
+            <div class="event-info">📅 25 ოქტომბერი, 2025 — 10:00</div>
+            <div class="event-info">📍 წყალტუბოს ცენტრალური პარკი</div>
+            <div class="event-price">💵 მონაწილეობა: 20 ლარი</div>
+            <a href="#" class="btn">
+              მიიღე მონაწილეობა
+            </a>
+          </div>
         </center>
-        <div className="myCards">
-          <div className="card ">
-            <div class="slide slide1">
-              <div class="content">
-                <div class="icon">
-                  <img src={card1} />
-                </div>
-              </div>
-            </div>
-
-            <div class="slide slide2">
-              <div class="content">
-                <h3>Single Room</h3>
-                <Link to={`/singleRoom/single`} className="links">
-                  <p>Click to see more information</p>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div class="card ">
-            <div class="slide slide1">
-              <div class="content">
-                <div class="icon">
-                  <img src={card2} />
-                </div>
-              </div>
-            </div>
-
-            <div class="slide slide2">
-              <div class="content">
-                <h3>Double Room</h3>
-                <Link to={`/singleRoom/double`} className="links">
-                  <p>Click to see more information </p>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div class="card ">
-            <div class="slide slide1">
-              <div class="content">
-                <div class="icon">
-                  <img src={card5} />
-                </div>
-              </div>
-            </div>
-
-            <div class="slide slide2">
-              <div class="content">
-                <h3>Family Room</h3>
-                <Link to={`/singleRoom/family`} className="links">
-                  <p>Click to see more information</p>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="slide slide1">
-              <div class="content">
-                <div class="icon">
-                  <img src={card3} />
-                </div>
-              </div>
-            </div>
-
-            <div class="slide slide2">
-              <div class="content">
-                <h3>Presedential Room</h3>
-                <Link to={`/singleRoom/presidential`} className="links">
-                  <p>Click to see more information</p>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
