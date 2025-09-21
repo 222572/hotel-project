@@ -1,0 +1,138 @@
+.navbar {
+  background-color: #37745b;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1500px;
+  padding: 0 20px;
+}
+
+.nav-logo {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.nav-logo:hover {
+  color: white !important;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+  position: relative;
+}
+
+.nav-links {
+  color: #fff;
+  font-weight: 600 !important;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+
+.nav-links:hover {
+  color: white;
+}
+
+.nav-item:hover:after {
+  width: 100%;
+  background: #c8d8e4;
+}
+
+.nav-item .active {
+  color: #c8d8e4;
+  font-weight: bolder;
+}
+
+.nav-icon {
+  display: none;
+}
+
+.login-and-signup-btn {
+  border: #37745b 2px solid;
+}
+
+.login-btn {
+  border-radius: 20px;
+  background-color: #ac6535;
+}
+
+.signup-btn {
+  border-radius: 25px;
+  background-color: #415a85;
+}
+
+.logout-btn {
+  border-radius: 20px;
+  background-color: rgb(140, 42, 42);
+}
+
+.bookings-btn {
+  border-radius: 20px;
+  color: white !important;
+  background-color: #182d71;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 67%;
+  left: 0;
+  background-color: #4d9a7a;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  min-width: 100px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-item {
+  padding: 7px;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: #4d9a7a;
+}
+
+.language-switcher {
+  cursor: pointer;
+  color: #fff;
+}
+
+.facebook-icon {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+}

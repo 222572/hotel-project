@@ -1,0 +1,23 @@
+.welcome-msg {
+  position: relative;
+  text-align: center;
+  width: 70%;
+  top: 50%;
+  border: 10px rgb(139, 139, 139) double;
+  margin: 30px;
+  opacity: 1s;
+  margin-top: 5%;
+}
+.welcome-msg h1 {
+  font-size: 3rem;
+  font-weight: 100;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+}
+.welcome-msg p {
+  font-size: 2.5vh;
+  font-weight: 1em;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  margin: 20px;
+}

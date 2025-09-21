@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container .card .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container .card .icon .fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: #fff;
+}
+.slide {
+  width: auto !important;
+}
+.container .card .slide {
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+}
+
+.container .card .slide.slide1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: 0.7s;
+  transform: translateY(100px);
+}
+
+.container .card:hover .slide.slide1 {
+  transform: translateY(0px);
+}
+
+.container .card .slide.slide2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.8s;
+  transform: translateY(-100px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.container .card:hover .slide.slide2 {
+  transform: translateY(0);
+}
+
+.container .card .slide.slide2::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  bottom: 15px;
+  left: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2c73df;
+}
+
+.container .card .slide.slide2 .content p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: black;
+}
+
+.container .card .slide.slide2 .content h3 {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 24px;
+  text-align: center;
+  color: black;
+}
+
+.card {
+  border: none;
+  margin: 5px;
+  width: 350px;
+  box-shadow: 0 10px 20px rgba(31, 31, 31, 0.4);
+}
+.myCards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.container {
+  margin-top: 5%;
+}
+
+.icon img {
+  width: 100% !important;
+  height: 100% !important;
+}
+.featured-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.search-room-input {
+  width: 30%;
+  margin: 18px !important;
+}
+
+.search {
+  width: 72.6%;
+  margin: 18px !important;
+}
+
+.sort {
+  width: 20%;
+  margin: 18px !important;
+}
+
+.singleRoom-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+}
+
+.singleRoom-cards .card {
+  margin: 10px;
+}
+
+.bookNow-btn {
+  background-color: #1f5156;
+  color: #fff;
+  width: 150px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.single-room-detail {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.single-room-detail-para {
+  width: 600px;
+  text-align: justify;
+  padding-left: 20px;
+  margin-left: 30px;
+}
+
+.single-room-detail-list {
+  width: 600px;
+  padding: 20px;
+  padding-left: 150px;
+  margin-left: 30px;
+}
+
+.room-details-heading {
+  margin-top: 50px;
+}
+
+.white {
+  color: white;
+}
+
+.singleRoom-cards .card-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.unavailable-room {
+  filter: grayscale(100%);
+}
