@@ -6,31 +6,23 @@ const About = () => {
     <div>
       <center>
         <div class="welcome-msg ">
-          <h1> About Ecowises </h1>
-          <p>
-            Ecowise is a five-star hotel founded in 2020 by Mariami Rusadze,
-            which has an excellent location in one of the most beautiful places
-            in Georgia - Shovi. The rooms at the Ecowise are spacious, elegant
-            and comfortable. All rooms are equipped with air conditioning,
-            heating, cable TV, a minibar and a safe. One of the special features
-            is the 100 m2 presidential rooms with 3 queen-size beds. The hotel
-            offers free Wi-Fi throughout the hotel and free parking, subject to
-            availability. From Monday to Friday, the Buffet Breakfast (BBF) is
-            served from 07:00 to 10:30, on Saturdays and Sundays and public
-            holidays until 11:00. The hotel also has a restaurant, which offers
-            a varied menu of local and international dishes. The Ecowise has a
-            gym and a heated swimming pool, which are open to all visitors.
-            There are group classes in the pool, which you can sign up for. Both
-            are open Monday to Friday from 7:00 to 10:30 and from 9:00 to 10:00
-            on Saturdays, Sundays and public holidays. There are tennis,
-            basketball, football and volleyball fields on site. The hotel is
-            located next to an 18-hole golf course, a few minutes from the ski
-            slopes. All necessary equipment can be purchased at the hotel. For
-            social and business meetings, Ecowise has 8 halls with a capacity of
-            up to 280 people, adapted to different needs and using the most
-            modern technologies. The hotel is surrounded by a beautiful forest,
-            where you can go for a walk or a picnic.
-          </p>
+          <h1> ეკოვაიზის შესახებ </h1>
+          <div>
+            ჩვენ ვართ ეკო-ინოვაციური გუნდი, რომელიც ბუნებისა და ტექნოლოგიის
+            შერწყმით ქმნის მდგრად გადაწყვეტილებებს. ჩვენი მისიაა მწვანე
+            სივრცეების გაზრდა, ბიომრავალფეროვნების დაცვა და მოქალაქეთა ჩართვა
+            ეკო-ინიციატივებში. <br />
+            🔹 ვქმნით პროდუქტებს, რომლებიც ერთდროულად ეკოლოგიურად სუფთა,
+            ინოვაციური და ადვილად გამოყენებადია. <br />
+            🔹 ვიყენებთ AI ანალიზს, დრონულ სკანირებას და მონაცემებზე დაფუძნებულ
+            გადაწყვეტილებებს, რათა თითოეული ნაბიჯი იყოს მიზნობრივი და ეფექტური.
+            <br />
+            🔹 გვჯერა, რომ პატარა ინიციატივა → დიდი ცვლილებაა და სწორედ ამას
+            ვაშენებთ Seed Bomb-ებითა და ჯეჯილის პროდუქტებით. <br />
+            🔹 ჩვენი ხედვაა საქართველო, როგორც მწვანე ინოვაციების ჰაბი, სადაც
+            ადგილობრივი ცოდნა და cutting-edge ტექნოლოგია ერთად ქმნის გლობალურ
+            შედეგს.
+          </div>
         </div>
       </center>
     </div>

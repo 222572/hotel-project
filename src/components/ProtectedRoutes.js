@@ -9,7 +9,7 @@ const ProtectedRoute = ({ children }) => {
     return (
       <>
         <Navigate to="/" />
-        {alert("Please login first to book the room !!")}
+        {alert("გთხოვთ ჯერ შექმნათ ანგარიში")}
       </>
     );
   }
